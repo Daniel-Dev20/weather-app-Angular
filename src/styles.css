@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+
+.content-img{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/img/weather.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.flex-container{
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+  
+   
+}
+
+.flex-container > div{
+
+ background-color: transparent;
+ width: 400px;
+ height: 400px;
+ margin: 10px;
+ text-align: center;
+ line-height: 75px;
+ border: 1px solid white;
+ color: white;
+ margin-top: 35px;
+ overflow:hidden;
+
+
+
+}
+
+.icon{
+    color: white;
+    margin-top: 20px;
+    display: block;
+    margin: opx auto;
+}
+.content-video{
+    background-color: black;
+}
+
+.video-back{
+    width: 100%;
+   
+}
+
+.content-country{
+
+    width: 100%;
+    height: 90vh;
+  
+    margin-top: 30px;
+}
+
+.info-country{
+
+    width: 500px;
+    height: 400px;
+    background: transparent;
+    border: 1px solid #fff;
+    display: block;
+    margin: 0px auto;
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+   
+}
+.info-country h3{
+
+    margin-top: 40px;
+}
+
+/*Animaciones*/
+
+.animated{
+
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast{
+
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from{
+
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+#spin{
+
+    display: flex;
+    justify-content: center;
+    color: #fff;
+   
+}
+

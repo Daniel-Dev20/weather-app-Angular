@@ -1,0 +1,35 @@
+
+<div class="content-img animated fadeIn fast">
+
+<div class="container">
+    
+    <div class="input-group flex-nowrap">
+        <input type="text" class="form-control mt-5" placeholder="Search Country"  (keyup)="searchWeather(termino.value)" #termino>
+      </div>
+</div>
+
+<div class="content-country animated fadeIn fast">
+  <app-loading *ngIf="loading"></app-loading>
+  <div *ngIf="data"  class="info-country animated fadeIn fast">
+      <i *ngIf="data.weather[0].main == 'Rain' "   class="fas fa-cloud-showers-heavy fa-5x icon animated fadeIn"></i>
+      <i *ngIf="data.weather[0].main == 'Clear' "  class="fas fa-sun fa-5x icon animated fadeIn"></i>
+      <i *ngIf="data.weather[0].main == 'Clouds' " class="fas fa-cloud-sun fa-5x icon animated fadeIn"></i>
+
+    <h3>{{data.name}}</h3>
+
+    <span  class="badge bg-warning text-dark m-1">weather: {{data.weather[0].main}} </span>
+            <span  class="badge bg-warning text-dark m-1">Temp: {{data.main.temp}} </span>
+            <span  class="badge bg-warning text-dark m-1">Temp Max: {{data.main.temp_max}} </span>
+            <span  class="badge bg-warning text-dark m-1">Temp Min: {{data.main.temp_min}}</span>
+            <span  class="badge bg-warning text-dark m-1">Humidity: {{data.main.humidity}}</span>
+            <span  class="badge bg-warning text-dark m-1">Descriptión: {{data.weather[0].description}} </span>
+            <span  class="badge bg-warning text-dark m-1">Wind: {{data.wind.speed}} </span>
+            <span  class="badge bg-warning text-dark m-1">Lat: {{data.coord.lat}} </span>
+            <span  class="badge bg-warning text-dark m-1">Lon: {{data.coord.lon}} </span>
+  </div>
+</div>
+
+    
+</div>
+
+
